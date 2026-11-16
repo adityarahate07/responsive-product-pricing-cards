@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Modern, accessible, and responsive SaaS pricing cards with flexible monthly and yearly billing toggle.">
+  <title>Find the Right Plan | SaaS Plans</title>
+  <!-- Link stylesheet in <head> -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Link app.js with defer attribute -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="page-wrapper">
+    <!-- Main Pricing Section -->
+    <section class="pricing-section" aria-labelledby="pricing-heading">
+      
+      <!-- Section Header -->
+      <header class="pricing-header">
+        <span class="badge-tag">Plans &amp; Pricing</span>
+        <h2 id="pricing-heading" class="pricing-title">Find the Right Plan</h2>
+        <p class="pricing-subtitle">
+          Choose the right plan to accelerate your business. Scale effortlessly with predictable pricing, zero hidden fees, and the freedom to change plans anytime.
+        </p>
+
+        <!-- Accessible Billing Toggle Group -->
+        <div class="billing-toggle-group" role="group" aria-label="Billing frequency options">
+          <button
+            type="button"
+            id="billing-monthly"
+            class="toggle-btn active"
+            aria-pressed="true"
+            data-billing="monthly"
+          >
+            Monthly
+          </button>
+          <button
+            type="button"
+            id="billing-yearly"
+            class="toggle-btn"
+            aria-pressed="false"
+            data-billing="yearly"
+          >
+            <span>Yearly</span>
+            <span class="discount-pill" aria-label="Save 20 percent">Save 20%</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Pricing Cards Container (CSS Grid) -->
+      <div class="pricing-grid">
+        
+        <!-- Starter Plan Card -->
+        <article class="pricing-card" aria-labelledby="plan-starter-title">
+          <div class="card-top">
+            <h3 id="plan-starter-title" class="plan-name">Starter</h3>
+            <p class="plan-description">Essential tools for independent creators, freelancers, and small side projects.</p>
+          </div>
+
+          <div class="card-price-block">
+            <div class="price-figure" aria-label="Starter plan cost">
+              <span class="currency-symbol" aria-hidden="true">₹</span>
+              <span class="price" data-monthly="499" data-yearly="4,790">499</span>
+            </div>
+            <span class="unit">per month</span>
+          </div>
+
+          <div class="card-action">
+            <button type="button" class="btn btn-outline" aria-label="Get Started with Starter Plan">
+              Get Started
+            </button>
+          </div>
+
+          <div class="card-features">
+            <p class="features-header">What's included:</p>
+            <ul class="features-list" role="list">
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>Up to 3 active projects</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>5 GB high-speed cloud storage</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>Standard community support</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>Real-time basic analytics</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>Export reports to CSV &amp; JSON</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Pro Plan Card (Highlighted Popular Plan) -->
+        <article class="pricing-card pricing-card-popular" aria-labelledby="plan-pro-title">
+          <!-- Distinct Popular Ribbon Badge -->
+          <div class="popular-ribbon" aria-label="Most Popular and Best Value Plan">
+            Most Popular
+          </div>
+
+          <div class="card-top">
+            <h3 id="plan-pro-title" class="plan-name">Pro</h3>
+            <p class="plan-description">For growing professionals and teams requiring enhanced power and flexibility.</p>
+          </div>
+
+          <div class="card-price-block">
+            <div class="price-figure" aria-label="Pro plan cost">
+              <span class="currency-symbol" aria-hidden="true">₹</span>
+              <span class="price" data-monthly="999" data-yearly="9,590">999</span>
+            </div>
+            <span class="unit">per month</span>
+          </div>
+
+          <div class="card-action">
+            <button type="button" class="btn btn-primary" aria-label="Start Free Trial with Pro Plan">
+              Start Free Trial
+            </button>
+          </div>
+
+          <div class="card-features">
+            <p class="features-header">Everything in Starter, plus:</p>
+            <ul class="features-list" role="list">
+              <li class="feature-item">
+                <svg class="feature-icon feature-icon-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>Unlimited active projects</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon feature-icon-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>100 GB high-speed cloud storage</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon feature-icon-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>Priority 24/7 email &amp; chat support</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon feature-icon-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>Advanced automated workflows</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon feature-icon-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>Custom integrations &amp; REST API access</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Team Plan Card -->
+        <article class="pricing-card" aria-labelledby="plan-team-title">
+          <div class="card-top">
+            <h3 id="plan-team-title" class="plan-name">Team</h3>
+            <p class="plan-description">Comprehensive collaboration, advanced governance, and dedicated support for organizations.</p>
+          </div>
+
+          <div class="card-price-block">
+            <div class="price-figure" aria-label="Team plan cost">
+              <span class="currency-symbol" aria-hidden="true">₹</span>
+              <span class="price" data-monthly="2,499" data-yearly="23,990">2,499</span>
+            </div>
+            <span class="unit">per month</span>
+          </div>
+
+          <div class="card-action">
+            <button type="button" class="btn btn-outline" aria-label="Choose Team Plan">
+              Choose Team
+            </button>
+          </div>
+
+          <div class="card-features">
+            <p class="features-header">Everything in Pro, plus:</p>
+            <ul class="features-list" role="list">
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>Unlimited team members &amp; collaborative seats</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>1 TB enterprise-grade cloud storage</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>Dedicated customer success manager</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>SSO (SAML), 2FA &amp; comprehensive audit logs</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>99.99% uptime SLA guarantee</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Trust Badges and Guarantees Footer -->
+      <footer class="pricing-trust-footer">
+        <div class="trust-badge">
+          <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          <span>30-Day Money-Back Guarantee</span>
+        </div>
+        <div class="trust-badge">
+          <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd" />
+          </svg>
+          <span>No Credit Card Required to Start</span>
+        </div>
+        <div class="trust-badge">
+          <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
+          </svg>
+          <span>Switch or Cancel Anytime</span>
+        </div>
+      </footer>
+
+    </section>
+  </main>
+</body>
+</html>
